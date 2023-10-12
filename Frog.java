@@ -49,8 +49,10 @@ public class Frog {
 	// frog and move to this position.  Returns no value.
     // DONE
 
-    public Frog visit(Frog other){
-        Jump();
+    public void visit(Frog other){
+        this.xPos = other.getXPos();
+		this.yPos = other.getYPos();
+
     }
 	
 	public void eatFly()
@@ -66,6 +68,7 @@ public class Frog {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// DONE
 		Frog f1 = new Frog("Freddy",3,4);	// create an instance of Frog
 		f1.eatFly();						// call Frog methods
 		f1.moveNorth();
@@ -74,13 +77,20 @@ public class Frog {
 		Frog f2 = new Frog("Francine", -2,0);
 		f2.eatFly();
 		// TODO uncomment these to test new code.
-		//f2.jump(2);
-		//f1.visit(f2);
+		// DONE
+		f2.Jump(2);
+		f1.visit(f2);
 		System.out.println(f1);
 		System.out.println(f2);
 		
 		// make a new frog named Frank.  have him jump twice and then go visit Freddy.
+		// DONE
 
+		Frog f3 = new Frog("Frank", 2,7);
+		f3.Jump(2);
+		System.out.println(f3);
+		f3.visit(f1);
+		System.out.println(f3);
 	}
 
 }

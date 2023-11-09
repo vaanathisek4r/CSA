@@ -1,12 +1,12 @@
 public class Conditionals {
     public static void main(String [] arg){
         Conditionals ab = new Conditionals();
-       /*  System.out.println(ab.chimpTrouble(true, true));
+       System.out.println(ab.chimpTrouble(true, true));
         System.out.println(ab.chimpTrouble(false, false));
         System.out.println(ab.chimpTrouble(true, false));
-        System.out.println(ab.chimpTrouble(false, true));*/
+        System.out.println(ab.chimpTrouble(false, true));
 
-        /*System.out.println(ab.negPos(1,-1, false));
+        System.out.println(ab.negPos(1,-1, false));
         System.out.println(ab.negPos(-1,1, false));
         System.out.println(ab.negPos(1,1, false));
         System.out.println(ab.negPos(-1,-1, false));
@@ -14,27 +14,32 @@ public class Conditionals {
         System.out.println(ab.negPos(-4,5, false));
         System.out.println(ab.negPos(4,5, false));
         System.out.println(ab.negPos(4,-5, false));
-        */
-
-        /*System.out.println(ab.pickUpPhone(false, false, true));
+        
+        System.out.println(ab.pickUpPhone(false, false, true));
         System.out.println(ab.pickUpPhone(true, true, true));
         System.out.println(ab.pickUpPhone(true, true, false));
         System.out.println(ab.pickUpPhone(false, true, false));
         System.out.println(ab.pickUpPhone(true, false, false));
-        System.out.println(ab.pickUpPhone(false, false, false));*/
+        System.out.println(ab.pickUpPhone(false, false, false));
 
-        /*System.out.println(ab.setAlarm(1, false));
+        System.out.println(ab.setAlarm(1, false));
         System.out.println(ab.setAlarm(5, false));
         System.out.println(ab.setAlarm (0, false));
         System.out.println(ab.setAlarm (2, true));
         System.out.println(ab.setAlarm (4, true));
-        System.out.println(ab.setAlarm (6, true));*/
+        System.out.println(ab.setAlarm (6, true));
 
-        /*System.out.println(ab.onesDigitSame (23, 19, 13));
+        System.out.println(ab.onesDigitSame (23, 19, 13));
         System.out.println(ab.onesDigitSame (23, 19, 12));
         System.out.println(ab.onesDigitSame (23, 19, 3));
         System.out.println(ab.onesDigitSame (423, 13, 3));
-        System.out.println(ab.onesDigitSame (23, 29, 25));*/
+        System.out.println(ab.onesDigitSame (23, 29, 25));
+
+        System.out.println(ab.onesDigitSame(23, 19, 13));
+        System.out.println(ab.onesDigitSame (23, 19, 12));
+        System.out.println(ab.onesDigitSame (23, 19, 3));
+        System.out.println(ab.onesDigitSame (423, 13, 3));
+        System.out.println(ab.onesDigitSame (23, 29, 25));
 
         System.out.println(ab.blackjack(19, 21));
         System.out.println(ab.blackjack(21, 19));

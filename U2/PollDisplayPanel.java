@@ -1,3 +1,4 @@
+package U2;
 /**
  * A PollDisplayPanel holds the vote counts and
  * displays the numbers and the pie chart for

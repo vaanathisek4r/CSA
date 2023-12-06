@@ -1,3 +1,4 @@
+package U4;
 public class WhileLoops {
     // PROBLEM 1
     public int addOdds(int n){

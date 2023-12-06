@@ -1,3 +1,4 @@
+package U2;
 public class Fraction {
 	private int numerator;		//attributes
 	private int denominator;

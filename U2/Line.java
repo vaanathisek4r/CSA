@@ -1,3 +1,4 @@
+package U2;
 public class Line {
     private Point end1;
     private Point end2;

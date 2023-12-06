@@ -1,3 +1,4 @@
+package U2;
 /*
  * Implements the control panel for the Poll program
  */

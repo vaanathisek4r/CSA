@@ -1,3 +1,4 @@
+package U2;
 public class Frog {
     private String name;
 	private int xPos;

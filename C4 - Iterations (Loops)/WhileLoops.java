@@ -1,4 +1,4 @@
-public class WhileLoops {
+public class WhileLoops{
     // PROBLEM 1
     public int addOdds(int n){
         int sum = 1;
@@ -35,7 +35,7 @@ public class WhileLoops {
 
     //PROBLEM 4
     public void printSum(int n){
-        int a = n;
+        int a = 0;
         int result = 0;
         while (result < n){
             result = (result+1);
@@ -43,9 +43,8 @@ public class WhileLoops {
             System.out.print(result);
             System.out.print(" + ");
         }
-        System.out.print(n);
         System.out.print(" = ");
-        System.out.print(a);    
+        System.out.println(a);
     }
 
 
@@ -53,7 +52,7 @@ public class WhileLoops {
 
         public static void main(String [] args){
         WhileLoops wl = new WhileLoops();
-        /*// PROBLEM 1
+        /*PROBLEM 1
         System.out.println(wl.addOdds(5));
         System.out.println(wl.addOdds(12));
         System.out.println(wl.addOdds(21));
@@ -66,8 +65,8 @@ public class WhileLoops {
         System.out.println(wl.howManyYears(111.2, 150.0));
         System.out.println(wl.howManyYears(111.2, 300.0));*/
         //PROBLEM 4
-        System.out.println(wl.printSum(6));
-        System.out.println(wl.printSum(8));
+        wl.printSum(6);
+        wl.printSum(8);
 
 
 

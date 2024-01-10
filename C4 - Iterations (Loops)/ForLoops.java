@@ -67,7 +67,7 @@ public class ForLoops {
         fl.printSquaresBack(10);
         fl.printSquaresBack(20);
         // PROBLEM 3
-        fl.sillyNumbers();
+        ForLoops.sillyNumbers();
         // PROBLEM 4
         sillyNumbers2();
         // PROBLEM 5

@@ -69,7 +69,7 @@ public class StringsExercises {
     }
     
     public static void main(String[] args) {
-        System.out.println("\scroll");
+        System.out.println("\nscroll");
         System.out.println(scroll("Hello World"));
         System.out.println(scroll("happy"));
         System.out.println(scroll("h"));

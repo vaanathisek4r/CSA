@@ -50,53 +50,61 @@ public class StringsExercises {
     // PROBLEM 7
     public static boolean endsWith(String s, String suffix) {
         if (suffix.length() > s.length()) return false;
-            else if (suffix.equals(s.substring((s.length() - suffix.length()), s.length()))) {
-                return true; }
-                    else return false;
+        else if (suffix.equals(s.substring((s.length() - suffix.length()), s.length()))) {
+            return true; }
+        else return false;
     }
 
     // PROBLEM 8
     public static String removeTag(String string, String tag) {
-
+        int a = string.indexOf("<");
+        int b = string.indexOf(">");
+        int c = string.lastIndexOf("<");
+        int d = string.lastIndexOf(">");
+        
+        if (tag.equals(string.substring(a+1,b)) && tag.equals(string.substring(c+2,d))) {
+            return string.substring(b+1,c);
+        }
+        else return string;
     }
     
     public static void main(String[] args) {
-        // System.out.println("\scroll");
-        // System.out.println(scroll("Hello World"));
-        // System.out.println(scroll("happy"));
-        // System.out.println(scroll("h"));
+        System.out.println("\scroll");
+        System.out.println(scroll("Hello World"));
+        System.out.println(scroll("happy"));
+        System.out.println(scroll("h"));
 
-        // System.out.println("\nconvertName");
-        // System.out.println(convertName(" Reubenstein, Lori Renee "));
-        // System.out.println(convertName("Biden,Joe"));
-        // System.out.println(convertName("the Clown, Bozo"));
+        System.out.println("\nconvertName");
+        System.out.println(convertName(" Reubenstein, Lori Renee "));
+        System.out.println(convertName("Biden,Joe"));
+        System.out.println(convertName("the Clown, Bozo"));
 
-        // System.out.println("\nnegative");
-        // System.out.println(negative("0010111001"));
-        // System.out.println(negative("11111111"));
+        System.out.println("\nnegative");
+        System.out.println(negative("0010111001"));
+        System.out.println(negative("11111111"));
 
-        // System.out.println("\ndateString");
-        // System.out.println("04/20/2014 becomes " + dateString("04/20/2014"));
+        System.out.println("\ndateString");
+        System.out.println("04/20/2014 becomes " + dateString("04/20/2014"));
 
-        // System.out.println("\ndateString2");
-        // System.out.println("04/20/2014 becomes " + dateString2("04/20/2014"));
-        // System.out.println("4/20/2014 becomes " + dateString2("4/20/2014"));
-        // System.out.println("04/2/2014 becomes " + dateString2("04/2/2014"));
-        // System.out.println("4/2/2024 becomes " + dateString2("4/2/2024"));
+        System.out.println("\ndateString2");
+        System.out.println("04/20/2014 becomes " + dateString2("04/20/2014"));
+        System.out.println("4/20/2014 becomes " + dateString2("4/20/2014"));
+        System.out.println("04/2/2014 becomes " + dateString2("04/2/2014"));
+        System.out.println("4/2/2024 becomes " + dateString2("4/2/2024"));
 
-        // System.out.println("\nstartsWith");
-        // System.out.println(startsWith("architecture", "arch"));
-        // System.out.println(startsWith("architecture", "a"));
-        // System.out.println(startsWith("arch", "architecture"));
-        // System.out.println(startsWith("architecture", "rch"));
-        // System.out.println(startsWith("architecture", "architecture"));
+        System.out.println("\nstartsWith");
+        System.out.println(startsWith("architecture", "arch"));
+        System.out.println(startsWith("architecture", "a"));
+        System.out.println(startsWith("arch", "architecture"));
+        System.out.println(startsWith("architecture", "rch"));
+        System.out.println(startsWith("architecture", "architecture"));
 
-        // System.out.println("\nendsWith");
-        // System.out.println(endsWith("astronomy", "nomy"));
-        // System.out.println(endsWith("astronomy", "y"));
-        // System.out.println(endsWith("astronomy", "nom"));
-        // System.out.println(endsWith("nomy", "astronomy"));
-        // System.out.println(endsWith("astronomy", "astronomy"));
+        System.out.println("\nendsWith");
+        System.out.println(endsWith("astronomy", "nomy"));
+        System.out.println(endsWith("astronomy", "y"));
+        System.out.println(endsWith("astronomy", "nom"));
+        System.out.println(endsWith("nomy", "astronomy"));
+        System.out.println(endsWith("astronomy", "astronomy"));
 
         System.out.println("\nremoveTag");
         System.out.println(removeTag("<b>Hello World</b>", "b"));
@@ -107,12 +115,5 @@ public class StringsExercises {
         System.out.println(removeTag("Happy Birthday <b>Hello World</b>", "b"));
         System.out.println(removeTag("<title>Hello World</title> Happy Birthday", "title"));
         System.out.println(removeTag("Happy <b>Hello World</b> Birthday", "b"));
- 
-
-
-
-
-
-
 }
 }

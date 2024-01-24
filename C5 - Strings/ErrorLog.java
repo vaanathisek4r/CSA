@@ -52,3 +52,13 @@ public class ErrorLog {
         System.out.println("message 7 " + er7.containsKey("disk"));
     }
 }
+
+// Output
+// message 1 false
+// message 2 true
+// message 3 false
+// message 4 true
+// message 5 true
+// message 6 false
+// message 6 true
+// message 7 true

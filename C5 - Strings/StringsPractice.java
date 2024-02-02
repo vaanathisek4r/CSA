@@ -21,9 +21,16 @@ public class StringsPractice {
         else return false;
     }
 
-    // PRACTICE 3
-    //public 
-
+    // TEST PRACTICE
+    public String pigLatin (String str) {
+        if(str.indexOf("a") == 0 || str.indexOf("e") == 0 || str.indexOf("i") == 0 || str.indexOf("o") == 0 || str.indexOf("u") == 0) {
+            return str + "way";
+        }
+        else if (str.indexOf("a") == 1 || str.indexOf("e") == 1 || str.indexOf("i") == 1 || str.indexOf("o") == 1 || str.indexOf("u") == 1) {
+            return str.substring(1) + str.charAt(0) + "ay";
+        }
+        else return str.substring(2) + str.substring(0,2) + "ay";
+    }
 
     public static void main(String[] args) {
         StringsPractice cs = new StringsPractice();
@@ -33,5 +40,10 @@ public class StringsPractice {
         System.out.println("\nisPalindrome");
         System.out.println(cs.isPalindrome("Vaanathi"));
         System.out.println(cs.isPalindrome("Racecar"));
+        System.out.println();
+        System.out.println("\npigLatin");
+        System.out.println(cs.pigLatin("apple"));
+        System.out.println(cs.pigLatin("dance"));
+        System.out.println(cs.pigLatin("train"));
 }
 }

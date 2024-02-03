@@ -32,6 +32,24 @@ public class StringsPractice {
         else return str.substring(2) + str.substring(0,2) + "ay";
     }
 
+    // TEST 2
+    public String mirror(String str) {
+        String fw = str;
+        String bw = "";
+        for (int i = 1; i<= str.length(); i++) {
+            bw += str.charAt(str.length() - i);
+        }
+        return fw + bw;
+    }
+
+    // TEST 3
+    public boolean doubleLetters(String str) {
+        for (int i = 0; i<= str.length() - 1; i++){
+            if(str.charAt(i) == (str.charAt(i+1))) return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         StringsPractice cs = new StringsPractice();
         System.out.println("\nprintBackward");
@@ -45,5 +63,13 @@ public class StringsPractice {
         System.out.println(cs.pigLatin("apple"));
         System.out.println(cs.pigLatin("dance"));
         System.out.println(cs.pigLatin("train"));
+        System.out.println();
+        System.out.println("\nmirror");
+        System.out.println(cs.mirror("Vaanathi"));
+        System.out.println();
+        System.out.println("\ndoubleLetters");
+        System.out.println(cs.doubleLetters("happy"));
+        System.out.println(cs.doubleLetters("Vaanathi"));
+
 }
 }

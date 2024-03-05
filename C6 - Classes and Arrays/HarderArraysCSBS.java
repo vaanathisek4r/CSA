@@ -1,9 +1,11 @@
 public class HarderArraysCSBS {
-    // returns new array a2, with each element value n from a replaced by n consecutive copies of the value n at the same relative location in the array.
     public static String nCopies(int[] a) {
         String new = "";
-        for(int i = 0; i <= a.length + 1; i++) {
-            String += a[i] * i;
+        while (i <= a.length){
+            for(int i = 0; i < a[i]; i++) {
+                new += [a[i]];
+            }
+
         }
         
     }

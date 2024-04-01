@@ -61,19 +61,17 @@ public class ScantArray {
      */
     public void removeColumn(int col){
         /* part b */
-        for (int i = entries.size(); i > 0; i--) {
+        for (int i = entries.size()-1; i >= 0; i--) {
             ScantArrayEntry x = entries.get(i);
             if (x.getColumn() == col) {
                 entries.remove(i);
             }
             else if (x.getColumn() > col) {
                 entries.remove(x);
-                addEntry(i,x.getColumn(),i);
+                addEntry(x.getRow(),x.getColumn()-1,x.getValue());
             }
         }
-		
-		
-		
+        numColumns--;
     }
 
     /** Allows the ScantArray to be printed.  The
@@ -88,10 +86,12 @@ public class ScantArray {
     public String toString(){
         /* part c */
         String s = "";
-
-        
-		
-		
+        for (int row = 0; row < numRows; row++) {
+            for (int column = 0; column < numColumns; column++) {
+                s += getValueAt(row,column);
+            }
+            s+= ("\n");
+        }
         return s;
     }
 

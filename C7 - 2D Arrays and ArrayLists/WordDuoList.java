@@ -40,11 +40,12 @@ public class WordDuoList {
      */
     public WordDuoList(String[] words){
         /* part A */
-        
-		
-		
+        allDuos = new ArrayList<>();
+        int i = 0;
+        for (int j = 0; i < words.length - 2; j++) {
+            result += words.get(j) +
+        }
 
-    }
     public String toString(){
         String s = "";
         for (WordDuo wd: allDuos){
@@ -71,7 +72,7 @@ public class WordDuoList {
      */
     public int numMatches(){
         /* part B  */
-        
+        int 
 		
 		
         return 0;  // replace this

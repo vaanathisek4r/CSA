@@ -113,6 +113,27 @@ public class ScantArray {
         sa1.removeColumn(1);
         System.out.println(sa1);
 
+       
+
         /******* please add one more test of your own *******/
+        sa1.addEntry(1,6,-4);
     }
 }
+
+//OUPUT
+/*
+1
+-9
+0
+rows 4
+columns 5
+00000
+05004
+10000
+0-9000
+
+0000
+0004
+1000
+0000
+ */

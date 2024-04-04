@@ -40,10 +40,13 @@ public class WordDuoList {
      */
     public WordDuoList(String[] words){
         /* part A */
-        allDuos = new ArrayList<>();
-        int i = 0;
-        for (int j = 0; i < words.length - 2; j++) {
-            result += words.get(j) +
+        allDuos = new ArrayList<WordDuo>();
+        for(int i = 0; i<words.length-1; i++) {
+            for(int j = 1+i; j<words.length; j++) {
+                WordDuo holder = new WordDuo(words[i], words[j]);
+                allDuos.add(holder);
+                }
+            }
         }
 
     public String toString(){
@@ -72,10 +75,15 @@ public class WordDuoList {
      */
     public int numMatches(){
         /* part B  */
-        int 
-		
-		
-        return 0;  // replace this
+        int counter = 0; 
+        String tester1 = new String();
+        String tester2 = new String();
+        for(int i = 0; i<allDuos.size(); i++) {
+            tester1 = (allDuos.get(i)).getFirst();
+            tester2 = (allDuos.get(i)).getSecond(); 
+            if(tester1.equals(tester2)) counter++;
+        }
+        return counter; 
     }
 
     /*Write the method moveMatchesToTop()  THis method will look for
@@ -90,9 +98,18 @@ public class WordDuoList {
      */
     public void moveMatchesToTop(){
         /* part c */
-        
-		
-		
+        WordDuo holder = null; 
+        int i = 0;
+        int sz = allDuos.size(); 
+        while(i<sz) {
+            holder = allDuos.get(i);
+            if(holder.getFirst().equals(holder.getSecond())){
+                allDuos.remove(i);
+                allDuos.add(0,holder);
+                i--;
+            }
+            i++;
+        }
     }
 
     public static void main(String[] args){
@@ -118,3 +135,107 @@ public class WordDuoList {
         System.out.println(wdl3);
     }
 }
+
+//OUTPUT
+/*
+(to, be)
+(to, or)
+(to, not)
+(to, to)
+(to, be)
+(be, or)
+(be, not)
+(be, to)
+(be, be)
+(or, not)
+(or, to)
+(or, be)
+(not, to)
+(not, be)
+(to, be)
+
+2
+(be, be)
+(to, to)
+(to, be)
+(to, or)
+(to, not)
+(to, be)
+(be, or)
+(be, not)
+(be, to)
+(or, not)
+(or, to)
+(or, be)
+(not, to)
+(not, be)
+(to, be)
+
+(one, fish)
+(one, two)
+(one, fish)
+(one, red)
+(one, fish)
+(one, blue)
+(one, fish)
+(fish, two)
+(fish, fish)
+(fish, red)
+(fish, fish)
+(fish, blue)
+(fish, fish)
+(two, fish)
+(two, red)
+(two, fish)
+(two, blue)
+(two, fish)
+(fish, red)
+(fish, fish)
+(fish, blue)
+(fish, fish)
+(red, fish)
+(red, blue)
+(red, fish)
+(fish, blue)
+(fish, fish)
+(blue, fish)
+
+6
+(fish, fish)
+(fish, fish)
+(fish, fish)
+(fish, fish)
+(fish, fish)
+(fish, fish)
+(one, fish)
+(one, two)
+(one, fish)
+(one, red)
+(one, fish)
+(one, blue)
+(one, fish)
+(fish, two)
+(fish, red)
+(fish, blue)
+(two, fish)
+(two, red)
+(two, fish)
+(two, blue)
+(two, fish)
+(fish, red)
+(fish, blue)
+(red, fish)
+(red, blue)
+(red, fish)
+(fish, blue)
+(blue, fish)
+
+(call, me)
+(call, ishmael)
+(me, ishmael)
+
+0
+(call, me)
+(call, ishmael)
+(me, ishmael)
+ */

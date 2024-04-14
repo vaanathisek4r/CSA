@@ -1,7 +1,7 @@
 /* The following complete class is used to represent non-zero
 elements in a scant array.  A ScantArrayEntry object cannot
 be modified after it is created.
- */
+ *///
 public class ScantArrayEntry {
     /* the row and column index for this entry in the Scant Array*/
     private int row;
